@@ -1,18 +1,15 @@
-import Head from "next/head";
 import SearchBar from "../components/SearchBar";
 import CoinList from "../components/CoinList";
+import Layout from "../components/Layout";
 
 export default function Home({ data }) {
   return (
-    <div>
-      <Head>
-        <title>Hello MF</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <SearchBar type="type" placeholder="Search" />
-      <CoinList data={data} />
-    </div>
+    <Layout>
+      <div className="crypto_tracker_app">
+        <SearchBar type="type" placeholder="Search" />
+        <CoinList data={data} />
+      </div>
+    </Layout>
   );
 }
 
