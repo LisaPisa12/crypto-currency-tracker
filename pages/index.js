@@ -1,16 +1,17 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import SearchBar from "../components/SearchBar";
+import Coins from "../components/Coins";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Hello MF</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SearchBar />
+      <SearchBar type="type" placeholder="Search" />
+      <Coins />
     </div>
   );
 }
